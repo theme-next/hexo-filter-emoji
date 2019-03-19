@@ -1,20 +1,18 @@
-# hexo-filter-github-emojis
+# hexo-filter-emoji
 
-[![Npm Version](https://img.shields.io/npm/v/hexo-filter-github-emojis.svg)](https://npmjs.org/package/hexo-filter-github-emojis)
-[![Npm Downloads Month](https://img.shields.io/npm/dm/hexo-filter-github-emojis.svg)](https://npmjs.org/package/hexo-filter-github-emojis)
-[![Npm Downloads Total](https://img.shields.io/npm/dt/hexo-filter-github-emojis.svg)](https://npmjs.org/package/hexo-filter-github-emojis)
-[![License](https://img.shields.io/npm/l/hexo-filter-github-emojis.svg)](https://npmjs.org/package/hexo-filter-github-emojis)
+[![Npm Version](https://img.shields.io/npm/v/hexo-filter-emoji.svg)](https://npmjs.org/package/hexo-filter-emoji)
+[![Npm Downloads Month](https://img.shields.io/npm/dm/hexo-filter-emoji.svg)](https://npmjs.org/package/hexo-filter-emoji)
+[![Npm Downloads Total](https://img.shields.io/npm/dt/hexo-filter-emoji.svg)](https://npmjs.org/package/hexo-filter-emoji)
+[![License](https://img.shields.io/npm/l/hexo-filter-emoji.svg)](https://npmjs.org/package/hexo-filter-emoji)
 
-A Hexo plugin that adds emoji support, using [Github Emojis API][ghemojis].
+A Hexo plugin that adds emoji support, using [Github Emojis API](https://api.github.com/emojis).
 
 Check out the [Emoji Cheat Sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/) for all the emojis it supports.
-
-V2 is not compatible with [V1](https://github.com/crimx/hexo-filter-github-emojis/tree/e52ceb8b18a7b06916b6cb0a887b218d49a7ab92). V1 replaces codepoints with `<img>` tags. While V2 makes the font transparent and displays emojis with `background-image`.
 
 ## Installation
 
 ``` bash
-$ npm install hexo-filter-github-emojis --save
+$ npm install hexo-filter-emoji --save
 ```
 
 ## Options
@@ -132,4 +130,6 @@ You can also render a GitHub emoji from a template using the `github_emoji` help
 <h1><% github_emoji('octocat') %></h1>
 ```
 
-[ghemojis]: https://api.github.com/emojis
+## Credits
+
+[hexo-filter-github-emojis](https://github.com/crimx/hexo-filter-github-emojis), Author: [crimx](https://github.com/crimx).
