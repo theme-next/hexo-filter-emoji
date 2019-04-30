@@ -9391,5 +9391,18 @@
   },
   "documentation_url": {
     "src": "https://developer.github.com/v3/#rate-limiting"
+  },
+  "sassy_man": {
+    "src": "https://github.githubassets.com/images/icons/emoji/unicode/1f481-2642.png?v8",
+    "codepoints": [
+      "1f481",
+      "2642"
+    ]
+  },
+  "sassy_woman": {
+    "src": "https://github.githubassets.com/images/icons/emoji/unicode/1f481.png?v8",
+    "codepoints": [
+      "1f481"
+    ]
   }
 }

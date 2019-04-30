@@ -17,7 +17,7 @@ $ npm install hexo-filter-emoji --save
 
 ## Options
 
-You can configure this plugin in `_config.yml`. Default options:
+You can configure this plugin in Hexo `_config.yml`. Default options:
 
 ``` yaml
 githubEmojis:
