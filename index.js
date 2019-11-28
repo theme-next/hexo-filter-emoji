@@ -26,20 +26,16 @@ if (options.enable !== false) {
   hexo.extend.filter.register('before_post_render', data => {
     if (data['no-emoji']) return data;
 
-    data.content = replaceColons(data.content, emojis);
+    data.content = data.content.replace(
+      /:(\w+):/ig,
+      (match, p1) => emojis[p1] ? renderEmoji(emojis, p1) : match,
+    );
 
     return data;
   });
 
   hexo.extend.helper.register('emoji', name => renderEmoji(emojis, name))
   hexo.extend.tag.register('emoji', args => renderEmoji(emojis, args[0]))
-}
-
-function replaceColons(content, emojis) {
-  return content.replace(
-    /:(\w+):/ig,
-    (match, p1) => emojis[p1] ? renderEmoji(emojis, p1) : match,
-  )
 }
 
 function loadCustomEmojis(customEmojis) {
@@ -77,7 +73,7 @@ function renderEmoji(emojis, name) {
   const styles = _.isObject(options.styles)
     ? Object.keys(options.styles)
       .filter(k => _.isString(options.styles[k]))
-      .map(k => k + ':' + options.styles[k])
+      .map(k => k + ': ' + options.styles[k])
     : [];
 
   styles.push(`background-image: url(${emojis[name].src})`);
@@ -86,5 +82,5 @@ function renderEmoji(emojis, name) {
     ? emojis[name].codepoints.map(c => `&#x${c};`).join('')
     : ' ';
 
-  return `<span class="${options.className}" style="${styles.join(';')}" data-src="${emojis[name].src}">${codepoints}</span>`;
+  return `<span class="${options.className}" style="${styles.join('; ')}" data-src="${emojis[name].src}">${codepoints}</span>`;
 }

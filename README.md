@@ -30,7 +30,7 @@ emoji:
 - **className** - Image class name. For example :sparkles: `:sparkles:` the filter will generate something like this:
 
   ```html
-  <span class="github-emoji" style="background-image:url(https://assets-cdn.github.com/images/icons/emoji/unicode/2728.png?v8)" data-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2728.png?v8">&#x2728;</span>
+  <span class="github-emoji" style="background-image: url(https://assets-cdn.github.com/images/icons/emoji/unicode/2728.png?v8)" data-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2728.png?v8">&#x2728;</span>
   ```
 
 - **styles** - inline styles. For example:
@@ -45,7 +45,7 @@ emoji:
   outputs:
 
   ```html
-  <span class="github-emoji" style="font-size:2em;font-weight:bold;background-image:url(...)" ...>
+  <span class="github-emoji" style="font-size: 2em; font-weight: bold; background-image: url(...)" ...>
   ```
 
 - **customEmojis** - You can specify your own list. An object or JSON string is valid. The filter will first check the `customEmojis` then fallback to the [Github Emojis][ghemojis] list.
