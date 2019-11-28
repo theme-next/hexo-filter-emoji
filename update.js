@@ -8,7 +8,7 @@ const randomUa = require('random-ua');
 request({
   url    : 'https://api.github.com/emojis',
   headers: {
-    'User-Agent': randomUa.generate(),
+    'User-Agent': randomUa.generate()
   },
   json   : true
 }, function (error, response, json) {
@@ -43,6 +43,6 @@ request({
       } else {
         console.log(`Update ${Object.keys(emojis).length} emojis`);
       }
-    },
+    }
   );
 });
