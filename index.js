@@ -64,7 +64,7 @@ function loadCustomEmojis(customEmojis) {
     if (emoji.codepoints && !_.isArray(emoji.codepoints)) {
       emoji.codepoints = emoji.codepoints.split(' ');
     }
-  })
+  });
 }
 
 function renderEmoji(emojis, name) {
@@ -76,11 +76,11 @@ function renderEmoji(emojis, name) {
       .map(k => k + ': ' + options.styles[k])
     : [];
 
-  styles.push(`background-image: url(${emojis[name].src})`);
+  //styles.push(`background-image: url(${emojis[name].src})`);
 
   const codepoints = emojis[name].codepoints
     ? emojis[name].codepoints.map(c => `&#x${c};`).join('')
     : ' ';
 
-  return `<span class="${options.className}" style="${styles.join('; ')}" data-src="${emojis[name].src}">${codepoints}</span>`;
+  return `<span class="${options.className}" alias="${name}" style="${styles.join('; ')}" fallback-src="${emojis[name].src}">${codepoints}</span>`;
 }
