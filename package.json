@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/theme-next/hexo-filter-emoji",
   "engines": {
-    "node": ">=8.6.0"
+    "node": ">=10.9.0"
   },
   "keywords": [
     "hexo",
