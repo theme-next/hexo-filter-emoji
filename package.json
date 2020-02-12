@@ -19,7 +19,6 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "4.17.15",
-    "random-ua": "0.0.6",
-    "request": "2.88.2"
+    "random-ua": "0.0.6"
   }
 }
