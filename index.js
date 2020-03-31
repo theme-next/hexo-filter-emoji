@@ -80,19 +80,19 @@ function renderEmoji(emojis, name) {
 
   var codepoints;
 
-  if (emojis[name].codepoints && emojis[name].codepoints.length>1){
-    // 对于多个codepoint组成的emoji添加连接符或修饰符
+  if (emojis[name].codepoints && emojis[name].codepoints.length > 1) {
+    // 对于多个 codepoint 组成的 emoji 添加连接符或修饰符
     var firstCode = emojis[name].codepoints[0];
-    if((firstCode>='0030' && firstCode<='0039') || ['002a','0023'].includes(firstCode)){
-      //数字或符号（#，*）
+    if ((firstCode >= '0030' && firstCode <= '0039') || ['002a', '0023'].includes(firstCode)) {
+      // 数字或符号（#，*）
       codepoints = emojis[name].codepoints.map(c => `&#x${c};`).join('&#xfe0f;');
-    }else{
+    } else {
       codepoints = emojis[name].codepoints.map(c => `&#x${c};`).join('&#xfe0f;&#x200d;');
     }
-  }else
+  } else {
     codepoints = emojis[name].codepoints
       ? emojis[name].codepoints.map(c => `&#x${c};`).join('')
       : ' ';
-
+  }
   return `<span class="${options.className}" alias="${name}" style="${styles.join('; ')}" fallback-src="${emojis[name].src}">${codepoints}</span>`;
 }
